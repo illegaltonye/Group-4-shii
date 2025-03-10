@@ -8,7 +8,6 @@
         <!-- Placeholder for Taskbar Icon -->
         <link rel="icon" href="image-removebg-preview (4).png" type="image/png">
     </head>
-    
 <body>
     <nav>
         <div class="logo">
@@ -17,7 +16,13 @@
             </a>
             PharmaCare
         </div>
-        <ul>
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
@@ -46,5 +51,6 @@
             <p>Get access to amazing deals and discounts on your medications.</p>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>

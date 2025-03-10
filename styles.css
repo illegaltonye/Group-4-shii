@@ -185,3 +185,96 @@ nav ul li a:hover {
     font-size: 0.9em;
   }
 }
+/* General Body Style */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #3cb371;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav .logo .logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001; /* Stays above nav panel */
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Fullscreen Nav Panel */
+.nav-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-panel.active {
+  display: flex; /* Show when active */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 20px 0; /* Spacing between links */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #3cb371; /* Highlighted green */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex; /* Show hamburger menu for smaller screens */
+  }
+}
