@@ -1,92 +1,125 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* General Body Style */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Animated Gradient Background */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Navigation Bar */
+nav {
+  background-color: #3cb371;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
 
+nav .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav .logo .logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: white; /* Highlight background on hover */
+  color: #3cb371; /* Text color changes to green */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Hero Section */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    padding: 0 10%;
-    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
-    background-size: 400% 400%;
-    animation: gradientAnimation 8s ease infinite;
-    color: white;
-    overflow: hidden;
+  text-align: center;
+  background-image: url('pharmacy\ background.jpeg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fallback color */
+  backdrop-filter: blur(5px); /* Adds a subtle blur */
+  text-shadow: 1px 1px 2px #000; /* Makes text stand out */
 }
 
-/* Content Styling */
-.hero-content {
-    max-width: 50%;
-    z-index: 2;
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.hero p {
+  font-size: 1.5em;
+  margin-top: 10px;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    opacity: 0.8;
+.hero button {
+  background-color: #3cb371;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-/* Button Styling */
-.cta-button {
-    background: #ff7f50;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
-    border-radius: 5px;
+.hero button:hover {
+  background-color: #2e8b57;
+  transform: translateY(-2px);
 }
 
-.cta-button:hover {
-    background: #ff5733;
-    transform: scale(1.1);
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #f0f0f0;
 }
 
-/* Hero Image */
-.hero-image img {
-    width: 100%;
-    max-width: 500px;
-    animation: floatAnimation 5s infinite ease-in-out;
+.feature {
+  text-align: center;
+  margin: 20px;
+  max-width: 300px;
 }
 
-/* Floating Image Animation */
-@keyframes floatAnimation {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+.feature img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
+.feature h3 {
+  color: #3cb371;
+}
 
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
+.feature img {
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
 
-    .hero-image img {
-        max-width: 80%;
-    }
+.feature img:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
