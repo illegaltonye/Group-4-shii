@@ -12,6 +12,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   color: white;
+  position: relative;
+  z-index: 1000;
 }
 
 nav .logo {
@@ -26,9 +28,10 @@ nav .logo .logo-img {
   margin-right: 10px;
 }
 
+/* Desktop Navigation Links */
 nav ul {
   list-style: none;
-  display: flex;
+  display: flex; /* Visible by default on desktop */
   margin: 0;
   padding: 0;
 }
@@ -46,9 +49,65 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: white; /* Highlight background on hover */
-  color: #3cb371; /* Text color changes to green */
-  border-radius: 5px; /* Rounded corners */
+  background-color: white;
+  color: #3cb371;
+  border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden by default for desktop screens */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* Mobile Navigation Panel */
+.nav-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-panel.active {
+  display: flex; /* Show when active */
+}
+
+.nav-panel .nav-links {
+  flex-direction: column; /* Stack links vertically for mobile */
+  list-style: none;
+  text-align: center;
+}
+
+.nav-panel .nav-links li {
+  margin: 20px 0;
+}
+
+.nav-panel .nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-panel .nav-links li a:hover {
+  color: #3cb371;
 }
 
 /* Hero Section */
@@ -98,6 +157,7 @@ nav ul li a:hover {
   justify-content: center;
   padding: 50px 20px;
   background-color: #f0f0f0;
+  flex-wrap: wrap; /* Enables wrapping for smaller screens */
 }
 
 .feature {
@@ -110,51 +170,25 @@ nav ul li a:hover {
   width: 100px;
   height: 100px;
   margin-bottom: 20px;
-}
-
-.feature h3 {
-  color: #3cb371;
-}
-
-.feature img {
   transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
 .feature img:hover {
   transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
-/* Desktop Navigation Links */
-nav ul {
-  list-style: none;
-  display: flex; /* This ensures the navigation items are displayed in a row */
-  margin: 0;
-  padding: 0;
+
+.feature h3 {
+  color: #3cb371;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  /* Hide Desktop Navigation Links */
   nav ul {
-    display: none; /* Hides nav-links in mobile view */
-  }
-}
-/* Default Desktop Navigation Links */
-nav ul {
-  list-style: none;
-  display: flex; /* Visible by default on larger screens */
-  margin: 0;
-  padding: 0;
-}
-
-/* Responsive Styling for Mobile */
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* Hide on mobile view */
+    display: none;
   }
 
-  .nav-panel.active ul {
-    display: flex; /* Show navigation panel on mobile when active */
-    flex-direction: column; /* Stack links vertically for mobile */
-    margin: 0;
-    padding: 0;
+  .hamburger {
+    display: flex; /* Show hamburger for smaller screens */
   }
 }
