@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PharmaCare</title>
-        <link rel="stylesheet" href="styles.css">
-        <!-- Placeholder for Taskbar Icon -->
-        <link rel="icon" href="image-removebg-preview (4).png" type="image/png">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PharmaCare - Your trusted partner in health and wellness">
+    <title>PharmaCare | Professional Healthcare Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
 <body>
-    <nav>
+    <nav class="navbar">
         <div class="logo">
-            <a href="index.html">
-                <img src="image-removebg-preview (4).png" alt="PharmaCare Logo" class="logo-img">
-            </a>
-            PharmaCare
-        </div>
-        <!-- Hamburger Menu -->
-        <div class="hamburger" onclick="toggleMenu()"
->
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+          MediCare 
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
     </nav>
-    <section class="hero">
+
+    <div class="nav-panel">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="home" class="hero">
         <h1>Welcome to PharmaCare</h1>
         <p>Your trusted partner in health and wellness</p>
-        <button>Explore Our Services</button>
+        <button aria-label="Explore Our Services">Explore Our Services</button>
     </section>
+
     <section class="features">
         <div class="feature">
-            <img src="delivery icon.png" alt="Fast Delivery">
+            <img src="delivery icon.png" alt="Fast Delivery Icon">
             <h3>Fast Delivery</h3>
             <p>Quick and reliable medicine delivery right to your doorstep.</p>
         </div>
         <div class="feature">
-            <img src="image-removebg-preview.png" alt="Online Consultation">
+            <img src="image-removebg-preview.png" alt="Online Consultation Icon">
             <h3>Online Consultation</h3>
             <p>Talk to our expert pharmacists anytime, anywhere.</p>
         </div>
         <div class="feature">
-            <img src="image-removebg-preview (2).png" alt="Affordable Prices">
+            <img src="image-removebg-preview (2).png" alt="Affordable Prices Icon">
             <h3>Affordable Prices</h3>
             <p>Get access to amazing deals and discounts on your medications.</p>
         </div>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>
