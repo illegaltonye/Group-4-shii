@@ -123,128 +123,38 @@ nav ul li a:hover {
 .feature img:hover {
   transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
-/* General Body Style */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Navigation Bar */
-nav {
-  background-color: #3cb371;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
-
-nav .logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-nav .logo .logo-img {
-  height: 40px;
-  margin-right: 10px;
-}
-
+/* Desktop Navigation Links */
 nav ul {
   list-style: none;
-  display: flex;
+  display: flex; /* This ensures the navigation items are displayed in a row */
   margin: 0;
   padding: 0;
 }
 
-nav ul li {
-  margin: 0 10px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Hides nav-links in mobile view */
+  }
 }
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: white; /* Highlight background on hover */
-  color: #3cb371; /* Text color changes to green */
-  border-radius: 5px; /* Rounded corners */
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  background-image: url('pharmacy\ background.jpeg'); /* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 100px 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Fallback color */
-  backdrop-filter: blur(5px); /* Adds a subtle blur */
-  text-shadow: 1px 1px 2px #000; /* Makes text stand out */
-}
-
-.hero h1 {
-  font-size: 3em;
+/* Default Desktop Navigation Links */
+nav ul {
+  list-style: none;
+  display: flex; /* Visible by default on larger screens */
   margin: 0;
+  padding: 0;
 }
 
-.hero p {
-  font-size: 1.5em;
-  margin-top: 10px;
-}
+/* Responsive Styling for Mobile */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide on mobile view */
+  }
 
-.hero button {
-  background-color: #3cb371;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.hero button:hover {
-  background-color: #2e8b57;
-  transform: translateY(-2px);
-}
-
-/* Features Section */
-.features {
-  display: flex;
-  justify-content: center;
-  padding: 50px 20px;
-  background-color: #f0f0f0;
-}
-
-.feature {
-  text-align: center;
-  margin: 20px;
-  max-width: 300px;
-}
-
-.feature img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-}
-
-.feature h3 {
-  color: #3cb371;
-}
-
-.feature img {
-  transition: transform 0.3s ease; /* Smooth scaling effect */
-}
-
-.feature img:hover {
-  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+  .nav-panel.active ul {
+    display: flex; /* Show navigation panel on mobile when active */
+    flex-direction: column; /* Stack links vertically for mobile */
+    margin: 0;
+    padding: 0;
+  }
 }
