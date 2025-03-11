@@ -185,12 +185,6 @@ nav ul li a:hover {
     font-size: 0.9em;
   }
 }
-/* General Body Style */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 /* Navigation Bar */
 nav {
   background-color: #3cb371;
@@ -200,8 +194,10 @@ nav {
   align-items: center;
   color: white;
   position: relative;
+  z-index: 1002; /* Ensures nav bar is on top */
 }
 
+/* Logo Styles */
 nav .logo {
   display: flex;
   align-items: center;
@@ -214,12 +210,38 @@ nav .logo .logo-img {
   margin-right: 10px;
 }
 
+/* Navigation Links (Desktop View) */
+.nav-links {
+  list-style: none;
+  display: flex; /* Default for desktop */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: white;
+  color: #3cb371;
+  border-radius: 5px;
+}
+
 /* Hamburger Menu */
 .hamburger {
-  display: none; /* Hidden by default */
+  display: none; /* Hidden for larger screens */
   flex-direction: column;
   cursor: pointer;
-  z-index: 1001; /* Stays above nav panel */
+  z-index: 1003; /* Stays above other elements */
 }
 
 .hamburger .line {
@@ -229,7 +251,7 @@ nav .logo .logo-img {
   margin: 4px 0;
 }
 
-/* Fullscreen Nav Panel */
+/* Fullscreen Nav Panel for Mobile */
 .nav-panel {
   position: fixed;
   top: 0;
@@ -241,40 +263,32 @@ nav .logo .logo-img {
   display: none; /* Hidden by default */
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .nav-panel.active {
   display: flex; /* Show when active */
 }
 
-/* Navigation Links */
-.nav-links {
-  list-style: none;
+.nav-panel .nav-links {
+  flex-direction: column; /* Stack links vertically for mobile */
   text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin: 20px 0; /* Spacing between links */
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #3cb371; /* Highlighted green */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  /* Hide Desktop Nav Links */
+  .nav-links {
+      display: none; /* Hidden on mobile view */
+  }
+
+  /* Show Hamburger Menu */
   .hamburger {
-      display: flex; /* Show hamburger menu for smaller screens */
+      display: flex;
+  }
+
+  /* Show Nav Links within the Nav Panel */
+  .nav-panel.active .nav-links {
+      display: flex;
   }
 }
