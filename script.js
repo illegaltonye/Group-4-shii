@@ -1,4 +1,4 @@
 function toggleMenu() {
-  const navPanel = document.querySelector('.nav-panel');
-  navPanel.classList.toggle('active'); // Toggles the 'active' class to show/hide menu
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active'); // Toggles the 'active' class to show/hide menu
 }
