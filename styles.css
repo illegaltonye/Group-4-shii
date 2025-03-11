@@ -31,7 +31,7 @@ nav .logo .logo-img {
 /* Desktop Navigation Links */
 nav ul {
   list-style: none;
-  display: flex; /* Visible by default on desktop */
+  display: flex; /* Visible by default for desktop */
   margin: 0;
   padding: 0;
 }
@@ -56,7 +56,7 @@ nav ul li a:hover {
 
 /* Hamburger Menu */
 .hamburger {
-  display: none; /* Hidden by default for desktop screens */
+  display: none; /* Hidden on desktop by default */
   flex-direction: column;
   cursor: pointer;
   z-index: 1001;
@@ -76,8 +76,8 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
   display: none; /* Hidden by default */
   justify-content: center;
   align-items: center;
@@ -85,11 +85,11 @@ nav ul li a:hover {
 }
 
 .nav-panel.active {
-  display: flex; /* Show when active */
+  display: flex; /* Show navigation panel when active */
 }
 
 .nav-panel .nav-links {
-  flex-direction: column; /* Stack links vertically for mobile */
+  flex-direction: column; /* Stack links vertically */
   list-style: none;
   text-align: center;
 }
@@ -119,7 +119,7 @@ nav ul li a:hover {
   color: white;
   padding: 100px 20px;
   background-color: rgba(0, 0, 0, 0.5); /* Fallback color */
-  backdrop-filter: blur(5px); /* Adds a subtle blur */
+  backdrop-filter: blur(5px); /* Subtle blur effect */
   text-shadow: 1px 1px 2px #000; /* Makes text stand out */
 }
 
@@ -157,7 +157,7 @@ nav ul li a:hover {
   justify-content: center;
   padding: 50px 20px;
   background-color: #f0f0f0;
-  flex-wrap: wrap; /* Enables wrapping for smaller screens */
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
 }
 
 .feature {
@@ -174,7 +174,7 @@ nav ul li a:hover {
 }
 
 .feature img:hover {
-  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+  transform: scale(1.1); /* Enlarges the icon slightly on hover */
 }
 
 .feature h3 {
